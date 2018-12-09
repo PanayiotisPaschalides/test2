@@ -55,7 +55,7 @@ class Messenger extends Component {
             
         }
     LoadChatItems(){
-        const self = this;
+        
         axios.get('/api/LoadChatItems', {
             params:{
                 UserName : this.state.logUser
@@ -179,7 +179,7 @@ class Messenger extends Component {
 
       <div>
         
-        <body>
+       
         <div className='MessengerContainer'>
                         <div className='sidepanel' ref={(div) => {this.SidePanel = div;}} >
 
@@ -299,7 +299,7 @@ class Messenger extends Component {
                     </div>
 
 
-        </body>
+      
     </div>
     );
   }

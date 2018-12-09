@@ -72,12 +72,13 @@ header{
    
   }
 .title{
+  position: relative;
     width: 90%;
     margin-left: 10px;
     word-wrap: break-word;
     white-space: pre-wrap;
     font-weight: bold;
-    margin-top: 10px;
+    top: 10px;
 }
 .Price{
   position: absolute;

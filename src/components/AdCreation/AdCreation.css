@@ -1,13 +1,76 @@
+.Section{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    border: rgb(144, 113, 141) solid 1px;
+    display: grid;
+    grid-template-rows: auto auto;
+    box-shadow: 2px 2px #55545442;
+}
+.SectionTitle{
+    border-bottom: rgb(144, 113, 141) solid 1px;
+    box-shadow: 1px 1px #55545442;
+    height: 30px;
+    background-color: #AF74A7;
+    grid-row: 1;
+}
+.SectionText{
+    position: relative;
+    margin-left: 10px;
+    font-size: 20px;
+    top: 2px;
+    color: whitesmoke;
+}
+.SectionBody{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    grid-row: 2;
+}
+.StartingSpacer{
+    position: relative;
+    border: 10px solid transparent;
+    width: 80%;
+    margin: 0 auto;
+}
+.Spacer{
+    position: relative;
+    border: 30px solid transparent;
+    width: 80%;
+    margin: 0 auto;
+}
+input[name = "title"]{
+    margin-left: 30px;
+    height: 40px;
+    width: 80%;
+    font-size: 16px;
+}
+input[name = "title"]:focus{
+    outline: none;
+}
+.DropDown{
+    margin-left: 30px;
+    height: 40px;
+    width: 80%;
+    font-size: 16px;
+}
+.DropDown:focus{
+    outline: none;
+  }
+.DropDownOption:hover{
+    background-color: #AF74A7;
+    
+}
 .ImagesContainer{
     text-align: left;
     width: 60%;
     margin: 0 auto;
-    background: rgb(196, 196, 196);
+    background: rgb(245, 245, 245);
     
 }
 input[type = "file"]{
     display: none;
 }
+
 .Select-Images{
     display: inline-block;
     width: 100px;
@@ -60,3 +123,77 @@ input[type = "file"]{
   .RemoveBtn:focus{
     outline: none;
   }
+  .SelectBtn{
+      width: 100%;
+      height: 100%;
+      font-size: 5em;
+      background-color: transparent;
+      color: grey;
+      border: solid black 1px;
+      
+  }
+  .SelectBtn:hover{
+    color: #AF74A7;
+}
+  .SelectBtn:focus{
+      outline: none;
+  }
+
+  
+  .Description{
+    resize: none;
+    width: 80%;
+    
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 80px;
+    max-height: 100%;
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  .Description:focus{
+    outline: none;
+  }
+
+.Currency {
+    margin-left: 30px;
+    border: 1px solid;
+    height: 40px;
+    
+}
+input[name = "cents"]{
+    
+    height: 40px;
+    width: 50px;
+    margin-left: 5px;
+    font-size: 16px;
+    border: none;
+}
+input[name = "cents"]:focus{
+    
+    outline: none;
+}
+input[name = "pounds"]{
+    
+    height: 40px;
+    width: 70px;
+    font-size: 16px;
+    margin-left: 5px;
+    border: none;
+}
+input[name = "pounds"]:focus{
+    
+    outline: none;
+}
+.price{
+    margin-left: 30px;
+    border-bottom: solid 1px;
+    width: 9.7%;
+}
+.PriceSeparator{
+    font-size: 2em;
+}
+.PriceSymbol{
+    font-size: 1em;
+}
+

@@ -6,7 +6,7 @@ import FontAwesome from 'react-fontawesome';
 import { Modal} from 'react-bootstrap';
 import Messenger from './Messenger/Messenger'
 import Geocode from "react-geocode";
-import Map from "./Tools/map"
+//mport Map from "./Tools/map"
 import CreateAdd from "./AdCreation/AdCreation"
 
 class home extends Component {
@@ -40,7 +40,10 @@ class home extends Component {
             testimg: [],
             MessengerMsg: '',
             MessengerStatus: 'fas fa-comment-o',
-            LoggedIn: false,
+            LoggedIn: true,
+            lat: '52.018099',
+            long: '-1.49229',
+            song: [],
             pictures: []
             
             
@@ -85,13 +88,20 @@ class home extends Component {
         this.PostAdd =  this.PostAdd.bind(this);
         
     }
+    componentDidUpdate(){
+        
+    }
     componentDidMount(){
         if(this.props.User !== undefined && this.props.ID !== undefined )
         {
             
             this.setState({logUser: this.props.User, UserID: this.props.ID, Page:'Home', LoggedIn: true})
 
-            
+            this.interval = setInterval(() => {
+                
+            this.CheckForNewMessages();
+           
+            }, 1000);
 
                 
             
@@ -209,7 +219,7 @@ class home extends Component {
         //console.log(this.state.searchField)
         //this.LoadRecipes(this.state.searchField);
     }
-    Logout(event){
+    Logout(){
         this.props.LogUserOut();
         window.location.reload();
     }
@@ -237,7 +247,7 @@ class home extends Component {
            
           })
     }
-    onSignupSubmit(event){
+    onSignupSubmit(){
         const self = this;
         if(this.state.Password !== this.state.PasswordConfirm)
         {
@@ -261,21 +271,21 @@ class home extends Component {
     
       
     }
-    LoginLink(event){
+    LoginLink(){
         this.SignupClose();
         this.LoginOpen();
     }
-    SignupLink(event){
+    SignupLink(){
         this.LoginClose();
         this.SignupOpen();
     }
-    OpenDropDown(event)
+    OpenDropDown()
     {
         
         this.setState({ DropDownMenuShow: true })
          
     }
-    CloseDropDown(event){
+    CloseDropDown(){
         
        
         this.setState({ DropDownMenuShow: false })
@@ -347,7 +357,6 @@ class home extends Component {
             })
     }
     LoadRecipe(ID){
-        const self = this;
         axios.get('/api/GetRecipe', {
             params:{
                 ID : ID
@@ -398,6 +407,7 @@ class home extends Component {
         {
             PageHeader = (
                 <header onMouseEnter={this.CloseDropDown}>
+                
                 <h1 className="sansserif">e</h1>
                 <div className="buttons">
                 <button name="buttonHome" onClick={this.handleClickHome} className="ButtonStyle">Home</button>
@@ -430,9 +440,20 @@ class home extends Component {
 
         if(this.state.Page === 'Home'){
             PageBody = (
-                <span>
+                <span onMouseEnter={this.CloseDropDown}>
                     <div className='AdvertsContainer'> 
-                 
+                    {this.state.AdvertList.map((Advert) => { return [
+                <div key={Advert.id} className="Album" >
+                  <img src={process.env.PUBLIC_URL + '/Uploaded_Images/'
+                   +  Advert.image} className="Album-Img" alt="Album" onClick={() => this.OpenRecipe(Advert.id)}/>
+                  <p className="Album-Name" onClick={() => this.OpenRecipe(Advert.id)}>
+                    <label className='title'>{Advert.title}</label>
+                    <label className='Price'>£ {Advert.price}</label>
+                  </p>
+                </div>
+                
+              ];
+            })}
             </div>
                 </span>
             )
@@ -442,7 +463,7 @@ class home extends Component {
         else if(this.state.Page === 'Managment'){
 
             PageBody = (
-                <span>
+                <span onMouseEnter={this.CloseDropDown}>
                     <div className='ManagmentContainer'>
                     {this.state.ManagmentList.map((recipe) => { return [
                 <div key={recipe.id} className="RecipeItem" >
@@ -468,7 +489,9 @@ class home extends Component {
         else if(this.state.Page === 'Messenger'){
             
             PageBody = (
-                    <Messenger user={this.state.logUser} addopen={this.OpenAdvert}/>
+                <span onMouseEnter={this.CloseDropDown}>
+                    <Messenger user={this.state.logUser} addopen={this.OpenAdvert} />
+                    </span>
             )
             
         }
@@ -484,10 +507,8 @@ class home extends Component {
     return (
 
       <div>
-        <head>
             <title>Home</title>
             <link rel="stylesheet" href="node_modules/react-star-rating/dist/css/react-star-rating.min.css"></link>
-        </head>
         {this.state.DropDownMenuShow? (
                  <div className='ExternalContainer' onClick={this.CloseDropDown}>
                     <div className="DropdownContainer" onMouseLeave={this.CloseDropDown}>
@@ -506,11 +527,11 @@ class home extends Component {
                 :null}
             {PageHeader}
             <div className='Top-Spacer'/>
-         <body onMouseEnter={this.CloseDropDown}>
+      
             
              {PageBody}
             
-           
+             {/*<Map lat={this.state.lat} long={this.state.long}/>*/}
             
 
              
@@ -582,7 +603,7 @@ class home extends Component {
             </Modal>
 
 
-        </body>
+        
     </div>
     );
   }

@@ -72,6 +72,7 @@ class RatingComponent extends Component {
     return (
 
       <div style={{fontSize: '30px'}}>
+      <link rel="stylesheet" href="node_modules/react-star-rating/dist/css/react-star-rating.min.css"></link>
         {/*https://github.com/voronianski/react-star-rating-component */}
              <StarRatingComponent 
           name="rate1" 

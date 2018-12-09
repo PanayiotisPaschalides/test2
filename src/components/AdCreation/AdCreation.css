@@ -1,0 +1,62 @@
+.ImagesContainer{
+    text-align: left;
+    width: 60%;
+    margin: 0 auto;
+    background: rgb(196, 196, 196);
+    
+}
+input[type = "file"]{
+    display: none;
+}
+.Select-Images{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    text-align: left;
+    position: relative;
+    border: 1px solid whitesmoke;
+    box-shadow: 2px 2px #55545442;
+}
+.ImageContainer{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    text-align: left;
+    position: relative;
+    border: 1px solid whitesmoke;
+    box-shadow: 2px 2px #55545442;
+}
+.ImageContainer:hover >.RemoveBtn{
+    display: initial;
+  }
+.Image{
+    width: 100px;
+    height: 100px;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    object-fit: cover;
+    left: -3px;
+    top: -3px;
+    position: absolute;
+  }
+  .RemoveBtn{
+    width: 20px;
+    height: 20px;
+    background: #AF74A7;
+    border-radius: 50%;
+    position: absolute;
+    border: none;
+    right: -4px;
+    color: white;
+    margin-bottom: 0;
+    margin-left: 0px;
+    cursor: pointer;
+    top: -4px;
+    display: none;
+   
+  }
+  .RemoveBtn:focus{
+    outline: none;
+  }

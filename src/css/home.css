@@ -1,0 +1,385 @@
+
+body{
+    
+    background-color: white;
+}
+.Top-Spacer{
+  height: 55px;
+}
+header{
+    position: fixed;
+    width: 100%;
+    background-color: #AF74A7;
+    height: 70px;
+    left: 0;
+    top: 0;
+    z-index: 100;
+ }
+
+
+
+.buttons{
+    float: right;
+    top: -80px;
+    position: relative;
+    
+}
+
+.ButtonStyle{
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+}
+
+
+/*picture recipes*/
+.Album{
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    text-align: left;
+    position: relative;
+    border: 3px solid whitesmoke;
+    box-shadow: 2px 2px #55545442;
+    cursor: pointer;
+}
+.Album:hover{
+  box-shadow: 3px 3px #55545442;
+}
+.Album-Img{
+    width: 300px;
+    height: 200px;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    object-fit: cover;
+    left: -3px;
+    top: -3px;
+    position: absolute;
+  }
+ 
+  .Album-Name{
+    width: 300px;
+    height: 100px;
+    background: rgb(233, 233, 233);
+    position: absolute;
+    border: none;
+    color: black;
+    margin-bottom: 0;
+    margin-left: 0px;
+    cursor: pointer;
+    bottom: 0px;
+   
+  }
+.title{
+    width: 90%;
+    margin-left: 10px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.Price{
+  position: absolute;
+  right: 3px;
+  font-size: 1.5em;
+  color: green;
+  bottom: 3px;
+}
+
+/*Modal*/
+  .fade {
+    opacity: 0;
+    -webkit-transition: opacity 0.15s linear;
+    -o-transition: opacity 0.15s linear;
+    transition: opacity 0.15s linear;
+  }
+  .fade.in {
+    opacity: 1;
+  }
+
+  .modal-open {
+    overflow: hidden;
+  }
+  .modal {
+    text-align: center;
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    top: 5vh;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+
+  }
+  .modal.fade .modal-dialog {
+    -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
+    -o-transform: translate(0, -25%);
+    transform: translate(0, -25%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+  }
+  .modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(10, 0);
+  }
+  .modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+  }
+  .modal-content {
+    position: relative;
+    background-color:white;
+    border: 4px solid white;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 9px rgb(0, 0, 0);
+    -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+    outline: 0;
+  }
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000000;
+  }
+  .modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  .modal-backdrop.in {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  .modal-header {
+    padding: 15px;
+    
+  }
+  .modal-header .close {
+    margin-top: -2px;
+  }
+  .Footer-Message{
+    font: 20px  Bradley Hand ITC, sans-serif;
+    font-weight: bold;
+  }
+  .Footer-Btn{
+    color: #A66FA6;
+    font: 20px  Bradley Hand ITC, sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .Footer-Btn:hover{
+    cursor: pointer;
+  }
+.Modal-Title{
+    font: 38px  Bradley Hand ITC, sans-serif;
+    color: #A66FA6;
+}
+.Modal-Close-Btn{
+    padding: 10px;
+    position: relative;
+    float: right;
+    color: white;
+    border:none;
+    background-color: #A66FA6;
+}
+.Modal-Close-Btn:hover{
+    cursor: pointer;
+ }
+.Modal-Close-Btn:focus{
+   outline: none;
+}
+  .modal-body {
+    
+    position: relative;
+    padding: 15px;
+  }
+  .modal-footer {
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #A66FA6 ;
+    border-bottom: none;
+  }
+  .modal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
+  }
+  @media (min-width: 768px) {
+    .modal-dialog {
+      width: 600px;
+      margin: 30px auto;
+    }
+    .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+    .modal-sm {
+      width: 300px;
+    }
+  }
+  @media (min-width: 992px) {
+    .modal-lg {
+      width: 900px;
+    }
+  }
+
+  .bodyContainer{
+      margin: 0 auto;
+      width: 300px;
+      text-align: left;
+  }
+  .InputField{
+    width: 300px;
+    height: 50px;
+    font-size: 1.1em;
+  }
+
+.InputField:focus{
+    outline: none;
+
+}
+.fieldHeading{
+    font: 20px  Bradley Hand ITC, sans-serif;
+    color: #A66FA6;
+    font-weight: bold;
+}
+.body-Btn{
+    border: none;
+    color: white;
+    font: 30px  Bradley Hand ITC, sans-serif;
+    font-weight: bold;
+    background-color: #A66FA6;
+    width: 300px;
+    height: 50px;
+
+}
+.body-Btn:focus{
+    outline: none;
+}
+button[name='buttonUsername']{
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
+}
+.ExternalContainer{
+  text-align: center;
+  position: relative;
+  width: 120px;
+  background: transparent;
+  z-index: 2;
+  position: fixed;
+  right: 180px;
+  top: 60px;
+
+}
+.DropdownContainer{
+  text-align: center;
+  width: 120px;
+  background: #A66FA6;
+  z-index: 2;
+  margin-top: 10px;
+
+}
+.divider{
+  border: 0.5px solid transparent;
+  width: 100px;
+  margin: 0 auto;
+  background: white;
+}
+.DropdownItem{
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
+  width: 120px;
+  height: 30px;
+  border:none;
+
+}
+.DropdownItem:hover{
+  color: rgb(90, 58, 90);
+}
+.DropdownItem:focus{
+  outline: none;
+}
+.ManagmentContainer{
+  top: 10px;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  
+}
+.AdvertsContainer{
+  top: 10px;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  
+}
+.Item-Img-Container{
+  grid-column: 1;
+}
+.Item-Para{
+  margin-top: 50px;
+  text-align: center;
+  grid-column: 2;
+}
+.RecipeItem{
+  width: 100%;
+  display: grid;
+  border: rgba(243, 241, 241, 0.842) solid;
+  border-radius: 8px;
+
+  height: 200px;
+}
+.RecipeItem:hover{
+  box-shadow: 5px 5px #55545442;
+}
+.Item-Img{
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  margin-left: 10px;
+  position: relative;
+  border-radius: 100px;
+  border: 1.5px solid rgba(173, 168, 168, 0.822);
+  float: left;
+}
+.Button-Container{
+  position: relative;
+  text-align: right;
+  margin-right: 30px;
+  margin-top: 80px;
+  grid-column: 3;
+}
+.Item-Buttons{
+  border: transparent;
+  background-color: rgb(16, 160, 35);
+  color: white;
+  height: 50px;
+  width: 100px;;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.Item-Buttons:focus{
+  outline: none;
+}
+
+

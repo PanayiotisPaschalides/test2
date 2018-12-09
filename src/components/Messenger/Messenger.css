@@ -1,0 +1,246 @@
+/*Messenger*/
+.MessengerContainer {
+    border: rgba(0, 0, 0, 0.603) solid;
+    margin: 0 auto;
+    height: 100%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 30% auto;
+    min-height: 90vh;
+    max-height: 90vh;
+  }
+  .sidepanel {
+    position: relative;
+    overflow-y: auto;
+    border-right: solid rgba(0, 0, 0, 0.603);
+    grid-column: 1;
+    max-height: 90vh;
+  
+  }
+  .mainpanel{
+    position: relative;
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: 15% 75% auto;
+    max-height: 89.5vh;
+  }
+  
+  .chatpanel {
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    grid-row: 2;
+  
+  }
+  .bottompanel {
+    position: relative;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 80% auto;
+    
+  }
+  .messagepanel {
+    border-top: grey solid;
+    grid-column: 1;
+  }
+  .chatbuttons{
+    text-align: center;
+    border-top: grey solid;
+    grid-column: 2;
+  }
+  .chatItem{
+    cursor: pointer;
+    border-bottom: solid transparent;
+    height: 100px;
+    width: 100%;
+  }
+  .advertpanel{
+    border-bottom : solid grey;
+    position: relative;
+    grid-row: 1;
+  }
+  
+  .chatItemContainer{
+    cursor: pointer;
+    border-bottom: solid transparent;
+    height: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100px auto;
+  }
+  .chatItem:hover{
+    background-color: rgba(223, 223, 223, 0.733);
+  }
+  .chatItemLeft{
+    grid-column: 1;
+  }
+  .ChatItemImg{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 70px;
+    height: 70px;
+    border: transparent solid;
+    border-radius: 50%;
+  }
+  
+  .chatItemRight{
+    grid-column: 2;
+  }
+  .ChatItemName{
+    margin-top: 8%;
+    overflow: hidden;
+    white-space: nowrap; /* Don't forget this one */
+    font-size: 1.3em;
+  
+  }
+  .ChatItemPreviewBold{
+    color: black;
+    font-weight: bold;
+  }
+  .ChatItemPreview{
+    color: rgba(75, 75, 75, 0.726);
+  }
+  .advertItems{
+    display: grid;
+    grid-template-columns: 10% auto;
+    margin-top: 10px;
+    
+  }
+  .AdvertInitialImg{
+    position: relative;
+    margin-left: 15%;
+    margin-top: 5%;
+    grid-column: 1;
+    width: 50px;
+    height: 50px;
+    border: #A66FA6 solid;
+    border-radius: 50%;
+    background-color: rgba(175, 116, 167, 0.651);
+  
+  }
+  .AdvertInitialChar{
+    position: relative;
+    color: white;
+    font-size: 30px;
+    margin-left: 35%;
+    top: 20%;
+  }
+  .AdvertDetails{
+    position: relative;
+    margin-top:1.8%;
+  
+    grid-column: 2;
+  }
+  .AdvertTitle{
+    color: blue;
+    font-size: 150%;
+    cursor: pointer;
+  }
+  .AdvertPrice{
+    font-size: 150%;
+  }
+  .recievedMsgContainer{
+  
+    float: left;
+    margin-left: 10px;
+    border: transparent solid;
+    border-radius: 4px;
+    background-color: rgb(202, 201, 201);
+    max-width: 50%;
+    
+  }
+  .recievedMsgText{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: transparent;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    font-size: 1.2em;
+  }
+  .MessageContainer{
+    width: 100%;
+    margin-top: 10px;
+    border: solid transparent;
+    
+    overflow:auto; 
+  }
+  .SendMsgContainer{
+  
+    float: right;
+    margin-right: 10px;
+    border: transparent solid;
+    border-radius: 4px;
+    background-color: rgba(0, 58, 247, 0.753);
+    max-width: 50%;
+    
+  }
+  .SendMsgText{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: transparent;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    font-size: 1.2em;
+  }
+  
+  .TextArea{
+    resize: none;
+    width: 100%;
+    border: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 110%;
+    max-height: 100%;
+    font-size: 1.5em;
+  }
+  .TextArea:focus{
+    outline: none;
+  }
+  .MessengerSendBtn{
+    margin-top: 15%;
+    border: none;
+    background-color: rgb(0, 39, 168);
+    border-radius: 4px;
+    height: 50%;
+    width: 80%;
+    color: white;
+    cursor: pointer;
+    outline:none;
+  }
+  
+  .ButtonMessenger{
+    margin-top: -10px;
+    height: 50px;
+    width: 50px;
+    font-size: 1.5em;
+    color: white;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .ButtonMessenger:focus{
+    outline: none;
+  }
+  
+  @media (max-width: 768px) {
+    .chatItemRight{
+      display: none;
+      grid-column: unset;
+    }
+    .chatItemLeft{
+      grid-column: unset;
+    }
+    .chatItem{
+      display: normal;
+      grid-template-columns: none;
+    }
+  
+  }

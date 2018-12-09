@@ -1,0 +1,40 @@
+.containerReset{
+    width: 500px;
+    height: 250px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgba(28, 29, 31, 0.9);
+    margin-top: 160px;
+ }
+ label[id="RegLabels"]{
+     color: #ff0000;
+ }
+
+.form-inputR input[name="Remail"] {
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-color: #990000;
+    border-bottom-width: 1px;
+    background-color: transparent;
+    color: white;
+    font-size: medium;
+    margin-top: 50px;
+    height: 45px;
+    width: 300px;
+}
+
+
+.form-inputR input[name="Remail"]:focus{
+    outline: none;
+}
+.btn-reset{
+    margin-top : 30px;
+    padding: 15px 65px;
+    border: none;
+    background-color: rgb(155, 1, 1);
+    font-size: 20px;
+    color: #fff;
+}
+.btn-reset:hover{
+    background-color: rgb(189, 3, 3);
+}

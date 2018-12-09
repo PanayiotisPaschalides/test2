@@ -1,0 +1,87 @@
+body{
+   background-color: rgb(44, 53, 54)
+}
+.containerL{
+   width: 500px;
+   height: 450px;
+   text-align: center;
+   margin: 0 auto;
+   background-color: rgba(28, 29, 31, 0.9);
+   margin-top: 160px;
+}
+.Logo{
+    position: absolute;
+    margin-top: -135px;
+    margin-left: 5px;
+    
+}
+img{
+    
+    width:300px;
+    height:200px;
+
+   
+}
+.form-inputL input[name="username"]{
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-color: #990000;
+    border-bottom-width: 1px;
+    background-color: transparent;
+    
+    color: white;
+    font-size: medium;
+    margin-top: 110px;
+    height: 45px;
+    width: 300px;
+}
+.form-inputL input[name="password"]{
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-color: #990000;
+    border-bottom-width: 1px;
+    background-color: transparent;
+    font-size: 20px;
+    color: white;
+    font-size: medium;
+    margin-top: 10px;
+    height: 45px;
+    width: 300px;
+}
+.form-inputL input[name="username"]:focus{
+    outline: none;
+}
+.form-inputL input[name="password"]:focus{
+    outline: none;
+}
+
+.btn-loginL{
+    margin-top : 30px;
+    padding: 15px 65px;
+    border: none;
+    background-color: rgb(155, 1, 1);
+    font-size: 20px;
+    color: #fff;
+}
+.btn-loginL:hover{
+    background-color: rgb(189, 3, 3);
+}
+
+.reset-linkL{
+    margin-top: 25px;
+}
+.register-linkL{
+    margin-top: 10px;
+}
+.link{
+    font-size: 20px;
+}
+.link{
+    color: white;
+}
+.link:visited{
+    color: white;
+}
+.link:hover{
+    color: #990000;
+}

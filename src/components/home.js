@@ -432,18 +432,7 @@ class home extends Component {
             PageBody = (
                 <span>
                     <div className='AdvertsContainer'> 
-                    {this.state.AdvertList.map((Advert) => { return [
-                <div key={Advert.id} className="Album" >
-                  <img src={process.env.PUBLIC_URL + '/Uploaded_Images/'
-                   +  Advert.image} className="Album-Img" alt="Album" onClick={() => this.OpenRecipe(Advert.id)}/>
-                  <p className="Album-Name" onClick={() => this.OpenRecipe(Advert.id)}>
-                    <div className='title'>{Advert.title}</div>
-                    <div className='Price'>£ {Advert.price}</div>
-                  </p>
-                </div>
-                
-              ];
-            })}
+                 
             </div>
                 </span>
             )
